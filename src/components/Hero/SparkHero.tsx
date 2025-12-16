@@ -82,19 +82,25 @@ export default function SparkHero() {
                         <Zap className="text-white w-10 h-10 fill-white" />
                     </motion.div>
 
-                    <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
-                        Flux<span className="text-blue-400">Mart</span>
+                    <h1 className="text-4xl md:text-5xl font-black italic text-white tracking-tight mb-4">
+                        D R I <span className="text-[#CCFF00]">P</span>
                     </h1>
-                    <p className="text-neutral-400 text-lg mb-8 leading-relaxed">
-                        Experience the next generation of e-commerce. <br />
-                        <span className="text-blue-200">Speed. Security. Spark.</span>
+                    <p className="text-neutral-400 text-lg mb-8 leading-relaxed font-mono uppercase text-sm tracking-widest">
+                        Secure the Hype. <br />
+                        <span className="text-[#CCFF00]">Limited Drops Only.</span>
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button className="px-8 py-3 bg-white text-black font-bold rounded-full hover:bg-neutral-200 transition-colors flex items-center justify-center gap-2">
-                            <ShoppingBag size={20} /> Shop Now
+                        <button
+                            onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
+                            className="px-8 py-3 bg-[#CCFF00] text-black font-black uppercase tracking-widest rounded-full hover:bg-[#b3e600] transition-colors flex items-center justify-center gap-2"
+                        >
+                            <ShoppingBag size={20} /> Shop Drops
                         </button>
-                        <button className="px-8 py-3 ring-1 ring-neutral-700 text-neutral-300 font-medium rounded-full hover:bg-neutral-800 transition-colors">
+                        <button
+                            onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
+                            className="px-8 py-3 ring-1 ring-neutral-700 text-neutral-300 font-bold uppercase tracking-widest rounded-full hover:bg-neutral-800 transition-colors"
+                        >
                             View Collection
                         </button>
                     </div>

@@ -6,6 +6,7 @@ import { Toaster } from "sonner";
 import SmoothScroll from "@/components/Layout/SmoothScroll";
 import Marquee from "@/components/Vibe/Marquee";
 import CustomCursor from "@/components/Vibe/CustomCursor";
+import TouchRipple from "@/components/ui/TouchRipple";
 import "./globals.css";
 
 const inter = Inter({
@@ -29,6 +30,7 @@ export default function RootLayout({
         className={`${inter.variable} antialiased bg-black text-neutral-200`}
       >
         <SmoothScroll>
+          <TouchRipple />
           <CustomCursor />
           <Marquee />
           <Navbar />

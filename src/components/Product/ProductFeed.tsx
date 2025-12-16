@@ -59,7 +59,7 @@ export default function ProductFeed() {
 
         if (observerTarget.current) observer.observe(observerTarget.current);
         return () => observer.disconnect();
-    }, [loading, displayedProducts, filteredProducts]);
+    }, [loading, displayedProducts, filteredProducts]); // loadMore logic depends on these, so this is safe assuming loadMore isn't wrapped in useCallback without deps
 
     const handleAddToCart = (product: Product, e: React.MouseEvent) => {
         e.preventDefault(); // Prevent Link navigation

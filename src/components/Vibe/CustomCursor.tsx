@@ -40,6 +40,8 @@ export default function CustomCursor() {
         };
     }, [cursorX, cursorY]);
 
+    if (typeof window !== 'undefined' && window.innerWidth < 768) return null;
+
     return (
         <motion.div
             className="fixed top-0 left-0 w-8 h-8 rounded-full border border-[#CCFF00] pointer-events-none z-[9999] mix-blend-difference hidden md:block" // Hidden on touch devices
